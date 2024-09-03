@@ -1,5 +1,7 @@
 package edu.clayton.csit.antlab.person;
 
+import java.util.Random;
+
 /**
  *  A simple class for person 2
  *  returns their name and a
@@ -8,6 +10,7 @@ package edu.clayton.csit.antlab.person;
  * @author Qu
  * @version 1.1
  */
+//edited by Celso Fuentes
 public class Person2 {
     /** Holds the persons real name */
     private String name;
@@ -31,7 +34,20 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  return null;
+          Random rand = new Random();
+          char[] word = input.toCharArray();
+          int num_of_times_to_randomize = input.length()/2;
+          int length = input.length();
+          for(int i = 0; i < num_of_times_to_randomize; i++){
+              char temp;
+              int firstChar = rand.nextInt(length);
+              int secondChar = rand.nextInt(length);
+              temp = word[firstChar];
+              word[firstChar] = word[secondChar];
+              word[secondChar] = temp;
+          }
+          String output = String.valueOf(word);
+	  return output;
 	}
 	/**
 	 * Return a string rep of this object
