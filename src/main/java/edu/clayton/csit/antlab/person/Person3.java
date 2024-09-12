@@ -1,4 +1,4 @@
-package edu.clayton.csit.antlab.person;;
+package edu.clayton.csit.antlab.person;
 /**
  *  A simple class for person 3
  *  returns their name and a
@@ -44,6 +44,5 @@ public class Person3 {
 	private String calc(String input) {
     	// Use StringBuilder to reverse the input string
     	return new StringBuilder(input).reverse().toString();
-}
 	}
 }
